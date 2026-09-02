@@ -1,0 +1,53 @@
+---
+name: Publish
+on:
+  workflow_dispatch:
+    inputs:
+      mark_as_latest:
+        description: Tag as latest
+        required: true
+        type: boolean
+        default: true
+
+jobs:
+  images:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      packages: write
+      id-token: write
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+      - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020
+      - run: bin/setup
+      - name: Build the Dev Container
+        run: >-
+          devcontainer build
+          --image-name ghcr.io/thoughtbot/devcontainers/images/debian
+          --workspace-folder images/debian
+      - name: Start the container
+        run: >-
+          devcontainer up
+          --id-label test-container=debian
+          --workspace-folder "images/debian"
+      - name: Run the tests in the container
+        run: >-
+          devcontainer exec
+          --id-label test-container=debian
+          --workspace-folder images/debian
+          /bin/sh test/test.sh
+      - name: Log in to ghcr
+        uses: docker/login-action@dbcb813823bdd20940b903addbd779551569679f
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+      - name: Tag the image with the current date
+        run: >-
+          docker tag
+          ghcr.io/thoughtbot/devcontainers/images/debian:latest
+          ghcr.io/thoughtbot/devcontainers/images/debian:$(date +"%Y%m%d")
+      - name: Push image with current date tag
+        run: docker push ghcr.io/thoughtbot/devcontainers/images/debian:$(date +"%Y%m%d")
+      - name: Push image with latest tag
+        run: docker push ghcr.io/thoughtbot/devcontainers/images/debian:latest
