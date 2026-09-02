@@ -1,0 +1,29 @@
+---
+name: Build & Test
+on:
+  workflow_dispatch:
+  push:
+
+jobs:
+  images:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
+      - run: bin/setup
+      - name: Build the Dev Container
+        run: >-
+          devcontainer build
+          --image-name ghcr.io/thoughtbot/devcontainers/images/debian
+          --workspace-folder images/debian
+      - name: Start the container
+        run: >-
+          devcontainer up
+          --id-label test-container=debian
+          --workspace-folder "images/debian"
+      - name: Run the tests in the container
+        run: >-
+          devcontainer exec
+          --id-label test-container=debian
+          --workspace-folder images/debian
+          /bin/sh test/test.sh
