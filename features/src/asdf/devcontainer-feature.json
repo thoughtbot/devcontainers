@@ -1,0 +1,22 @@
+{
+  "id": "asdf",
+  "version": "1.0.0",
+  "name": "asdf",
+  "documentationURL": "https://github.com/thoughtbot/devcontainers/tree/main/features/src/asdf",
+  "description": "Installs the asdf version manager",
+  "options": {
+    "version": {
+      "type": "string",
+      "proposals": [
+        "latest",
+        "v0.20.0"
+      ],
+      "default": "latest",
+      "description": "asdf version to install"
+    }
+  },
+  "containerEnv": {
+    "ASDF_DATA_DIR": "/opt/asdf",
+    "PATH": "/opt/asdf/shims:$PATH"
+  }
+}
