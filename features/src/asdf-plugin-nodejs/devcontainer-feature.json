@@ -1,0 +1,17 @@
+{
+  "id": "asdf-plugin-nodejs",
+  "version": "1.0.0",
+  "name": "nodejs plugin for asdf",
+  "documentationURL": "https://github.com/thoughtbot/devcontainers/tree/main/features/src/asdf-plugin-nodejs",
+  "description": "Installs the nodejs plugin for the asdf version manager",
+  "options": {
+    "versions": {
+      "type": "string",
+      "default": "lts",
+      "description": "nodejs version to install (comma seperated list)"
+    }
+  },
+  "dependsOn": {
+    "ghcr.io/thoughtbot/devcontainers/features/asdf:1": {}
+  }
+}
