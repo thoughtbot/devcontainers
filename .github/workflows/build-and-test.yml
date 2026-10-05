@@ -15,7 +15,6 @@ jobs:
       matrix:
         feature:
           - asdf
-          - asdf-plugin-nodejs
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
       - run: bin/setup
@@ -30,6 +29,8 @@ jobs:
           devcontainer build
           --image-name ghcr.io/thoughtbot/devcontainers/images/debian
           --workspace-folder images/debian
+      - name: Setup upterm session
+        uses: owenthereal/action-upterm@v2
       - name: Run feature tests
         run: >-
           devcontainer features test
