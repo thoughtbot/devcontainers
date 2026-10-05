@@ -46,6 +46,7 @@ compatible with any image.
 * [`asdf`](features/src/asdf): the tool version manager
   * [`asdf-plugin-nodejs`](features/src/asdf-plugin-nodejs): plugin to support
     Node.js
+  * [`asdf-plugin-ruby`](features/src/asdf-plugin-ruby): plugin to support Ruby
 
 ## Building, Testing and Publishing
 

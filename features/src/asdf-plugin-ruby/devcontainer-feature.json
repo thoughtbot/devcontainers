@@ -1,0 +1,17 @@
+{
+  "id": "asdf-plugin-ruby",
+  "version": "1.0.0",
+  "name": "Ruby plugin for asdf",
+  "documentationURL": "https://github.com/thoughtbot/devcontainers/tree/main/features/src/asdf-plugin-ruby",
+  "description": "Installs the Ruby plugin for the asdf version manager",
+  "options": {
+    "versions": {
+      "type": "string",
+      "default": "",
+      "description": "Ruby version to install (comma seperated list)"
+    }
+  },
+  "dependsOn": {
+    "ghcr.io/thoughtbot/devcontainers/features/asdf:1": {}
+  }
+}
