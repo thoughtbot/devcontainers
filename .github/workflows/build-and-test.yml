@@ -29,8 +29,8 @@ jobs:
           devcontainer build
           --image-name ghcr.io/thoughtbot/devcontainers/images/debian
           --workspace-folder images/debian
-      - name: Setup upterm session
-        uses: owenthereal/action-upterm@v2
+      # - name: Setup upterm session
+      #   uses: owenthereal/action-upterm@v2
       - name: Run feature tests
         run: >-
           devcontainer features test
