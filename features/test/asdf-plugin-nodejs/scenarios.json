@@ -1,0 +1,10 @@
+{
+  "multiple-versions": {
+    "image": "ghcr.io/thoughtbot/devcontainers/images/debian",
+    "features": {
+      "asdf-plugin-nodejs": {
+        "versions": "v22.23.3,v24.21.0"
+      }
+    }
+  }
+}
