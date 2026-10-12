@@ -1,0 +1,10 @@
+{
+  "specific-version": {
+    "image": "ghcr.io/thoughtbot/devcontainers/images/debian",
+    "features": {
+      "asdf": {
+        "version": "v0.20.0"
+      }
+    }
+  }
+}

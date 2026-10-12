@@ -7,10 +7,6 @@
   "options": {
     "version": {
       "type": "string",
-      "proposals": [
-        "latest",
-        "v0.20.0"
-      ],
       "default": "latest",
       "description": "asdf version to install"
     }
