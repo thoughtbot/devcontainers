@@ -34,6 +34,11 @@ to demonstrate different configuration approaches that we've seen on projects.
 * `debian` is a barebones image without any development environments
   * It's based on images provided by the `buildpack-deps` project,
   * Images are tagged by date of build, the most recent also tagged as `latest`,
+* `universal` is a bigger image, inspired by [`laptop`][5], which should be
+  everything you need for a web project
+  * It's based on the most recent build of `debian`,
+  * Images are tagged by date of build, along with a single `latest` pointed
+    to the most recent
 
 We currently only build `amd64` images, as this is enough to work with
 Codespaces.
@@ -115,3 +120,4 @@ Depending on the version of the feature, this will publish tags like:
 [2]: https://github.com/features/codespaces
 [3]: .devcontainer/
 [4]: https://github.com/thoughtbot/codespaces-demo/tree/custom-config
+[5]: https://github.com/thoughtbot/laptop
