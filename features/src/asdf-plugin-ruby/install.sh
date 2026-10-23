@@ -2,6 +2,8 @@
 
 set -eu
 
+export DEBIAN_FRONTEND="noninteractive"
+
 VERSIONS="${VERSIONS:-}"
 USERNAME="${USERNAME:-"${_REMOTE_USER:-"automatic"}"}"
 
