@@ -52,6 +52,7 @@ compatible with any image.
   * [`asdf-plugin-nodejs`](features/src/asdf-plugin-nodejs): plugin to support
     Node.js
   * [`asdf-plugin-ruby`](features/src/asdf-plugin-ruby): plugin to support Ruby
+* [`browsers`](features/src/browsers): headless browsers commonly used in tests
 
 ## Building, Testing and Publishing
 

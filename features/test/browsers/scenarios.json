@@ -1,0 +1,9 @@
+{
+  "chrome-selenium": {
+    "image": "ghcr.io/thoughtbot/devcontainers/images/debian",
+    "features": {
+      "ghcr.io/devcontainers/features/python:1": {},
+      "browsers": {}
+    }
+  }
+}
