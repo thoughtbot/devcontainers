@@ -9,7 +9,7 @@
       "versions": "3.0,3.1,3.2,3.3,3.4,4.0,4.0.0"
     },
     "ghcr.io/thoughtbot/devcontainers/features/asdf-plugin-nodejs:1": {
-      "versions": "20.11.0,lts"
+      "versions": "24.19.0,lts"
     },
   },
   "remoteUser": "codespace",
