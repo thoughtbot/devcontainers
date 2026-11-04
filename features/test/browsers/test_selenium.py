@@ -11,7 +11,6 @@ service = Service(
   log_output=subprocess.STDOUT)
 options = webdriver.ChromeOptions()
 options.add_argument("--headless")
-options.add_argument("--no-sandbox")
 
 try:
     driver = webdriver.Chrome(service=service, options=options)

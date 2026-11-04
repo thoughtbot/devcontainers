@@ -3,5 +3,6 @@
   "version": "1.0.0",
   "name": "browsers",
   "documentationURL": "https://github.com/thoughtbot/devcontainers/tree/main/features/src/browsers",
-  "description": "Installs browsers (Google Chrome) and tools for driving them headlessly"
+  "description": "Installs browsers (Google Chrome) and tools for driving them headlessly",
+  "securityOpt": ["seccomp=unconfined"]
 }
