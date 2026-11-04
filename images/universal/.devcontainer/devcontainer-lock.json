@@ -20,6 +20,11 @@
       "version": "1.0.0",
       "resolved": "ghcr.io/thoughtbot/devcontainers/features/asdf@sha256:073b2dd9e06753b6adf6a3f279d7ee6568243f632004c4872b5b036039949e26",
       "integrity": "sha256:073b2dd9e06753b6adf6a3f279d7ee6568243f632004c4872b5b036039949e26"
+    },
+    "ghcr.io/thoughtbot/devcontainers/features/browsers:1": {
+      "version": "1.0.0",
+      "resolved": "ghcr.io/thoughtbot/devcontainers/features/browsers@sha256:50eff4a42d8f014fd0b35e56c8528cf3bc1d5ca566ae4cf8eba793b0207fd958",
+      "integrity": "sha256:50eff4a42d8f014fd0b35e56c8528cf3bc1d5ca566ae4cf8eba793b0207fd958"
     }
   }
 }
