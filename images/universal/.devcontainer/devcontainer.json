@@ -14,5 +14,13 @@
     },
   },
   "remoteUser": "codespace",
-  "containerUser": "codespace"
+  "containerUser": "codespace",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "GitHub.vscode-pull-request-github",
+        "shopify.ruby-lsp"
+      ],
+    }
+  }
 }
