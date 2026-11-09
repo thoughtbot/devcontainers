@@ -28,6 +28,7 @@ to demonstrate different configuration approaches that we've seen on projects.
   used to work on the Dev Containers themselves,
 * [`codespaces-demo`][4]: shows a simple Rails app running with a Dev Container on
   GitHub Codespaces (but not these images and features),
+* [Administrate][6]: a sightly more complex Rails app, as used by contributors
 
 ## Images
 
@@ -122,3 +123,4 @@ Depending on the version of the feature, this will publish tags like:
 [3]: .devcontainer/
 [4]: https://github.com/thoughtbot/codespaces-demo/tree/custom-config
 [5]: https://github.com/thoughtbot/laptop
+[6]: https://github.com/thoughtbot/administrate/tree/main/.devcontainer
