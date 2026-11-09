@@ -23,6 +23,8 @@ services (like PostgreSQL).
 
 * [Building and Publishing](docs/building-and-publishing.md): details on
   building, testing and publishing both features and images
+* [GitHub Codespaces](docs/codespaces.md): additional details and tips for
+  using Codespaces
 
 ## Examples
 
